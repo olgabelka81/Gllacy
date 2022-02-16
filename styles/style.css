@@ -1,0 +1,545 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-ExtraBold.woff2') format('woff2'),
+      url('Inter-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-SemiBold.woff2') format('woff2'),
+      url('Inter-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Regular.woff2') format('woff2'),
+      url('Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Black.woff2') format('woff2'),
+      url('Inter-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Medium.woff2') format('woff2'),
+      url('Inter-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Light.woff2') format('woff2'),
+      url('Inter-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Thin.woff2') format('woff2'),
+      url('Inter-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-ExtraLight.woff2') format('woff2'),
+      url('Inter-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Inter-Bold.woff2') format('woff2'),
+      url('Inter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-extra-dark: #2d3440;
+  --color-dark: #565c66;
+  --color-neutral: #b9b9b9;
+  --color-light: #e7e7e7;
+  --color-extra-light: #fcfcfc;
+  --color-white: #ffffff;
+  --color-extra-bright: #ff2f64;
+  --color-bright: #ff4a78;
+  --color-neutral-bright: #ff7799;
+  --color-light-bright: #feafc3;
+  --color-extra-light-bright: #ffcbd8;
+  --color-blue: #69a9ff;
+  --color-yellow: #fcc850;
+  --color-error: #ea5454;
+  --color-warning: #fd912e;
+  --color-success: #00e484;
+  --color-border: rgba(255, 47, 100, 0.3);
+  --color-border-light: rgba(252, 252, 252, 0.4);
+  --color-background-color: rgba(252, 252, 252, 0.3);
+  --color-shadow: rgba(45, 52, 64, 0.1);
+}
+
+html {
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  background-color: var(--color-light-bright);
+}
+
+/* Шапка */
+
+.main-header {
+  margin: 0 auto;
+}
+
+.main-nav-list {
+  list-style-type: none;
+}
+
+.main-nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.phone {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.user-nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+/* Промо */
+
+.promo-list {
+  list-style-type: none;
+}
+
+.promo-caption {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.promo-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.promo-link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+  background-color: var(--color-white);
+  border: 4px solid var(--color-border-light);
+  border-radius: 26px;
+  box-shadow: 0px 4px 12px var(--color-shadow);
+}
+
+/* Пагинация */
+
+/* ССылки на соц.сети */
+
+/* Баннеры */
+
+.banner-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.banner-card-caption {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.banner-card-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.banner-card-link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: var(--color-extra-light);
+}
+
+.btn {
+  border: 4px solid var(--color-border-light);
+  border-radius: 26px;
+  box-shadow: 0px 4px 12px var(--color-shadow);
+}
+
+/* Популярные товары */
+
+.popular-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.popular-item-caption {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.popular-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.popular-item-price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* Преимущества */
+
+.advantages-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+}
+
+.advantages-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+/* Блог */
+
+.blog-link {
+  text-decoration: none;
+  color: var(--color-extra-dark);
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.blog-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-dark);
+}
+
+/* Подписка */
+
+.subscription-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.subscription-field {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-neutral);
+}
+
+.subscription-field::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-neutral);
+}
+
+.subscription-button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-extra-light);
+  background-color: var(--color-extra-bright);
+  border: 4px solid var(--color-border);
+  box-shadow: 0px 4px 12px var(--color-shadow);
+  border-radius: 26px;
+}
+
+/* Доставка */
+
+.delivery-tytle {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  color: var(--color-extra-dark);
+}
+
+.delivery-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.delivery-form-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.delivery-form-date,
+.delivery-form-phone,
+.delivery-form-adress {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.delivery-date-field,
+.delivery-phone-field,
+.delivery-adress-field {
+  font-family: "Inter",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--color-neutral);
+}
+
+/* Контакты */
+
+.contact-adress {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.contact-adress-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.contact-phone {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-dark);
+}
+
+.contact-phone-link {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+  font-style: normal;
+  text-decoration: none;
+}
+
+.contact-time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-dark);
+}
+
+.feedback-butoon {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-extra-light);
+  background-color: var(--color-extra-bright);
+  border: 4px solid var(--color-border);
+  border-radius: 26px;
+  box-shadow: 0px 4px 12px var(--color-shadow);
+}
+
+/* Футер */
+
+.footer-menu-strong {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.footer-menu-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  color: var(--color-extra-dark);
+}
+
+.footer-copyright-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-extra-dark);
+}
+
+.footer-copyright-link {
+  color: var(--color-extra-dark);
+}
+
+
+/* Каталог */
+
+.breadcrumbs-link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.breadcrumbs-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 46px;
+  color: var(--color-extra-dark);
+}
+
+.catalog-filter {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.sorting-button {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: var(--color-background-color);
+  border: 2px solid var(--color-extra-light);
+  border-radius: 20px;
+}
+
+.catalog-item-caption {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-extra-dark);
+}
+
+.catalog-item-text {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.catalog-item-price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+}
+
+.pagination-show-more {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-align: center;
+  background-color: var(--color-white);
+  border: 4px solid var(--color-border-light);
+  border-radius: 26px;
+  box-shadow: 0px 4px 12px var(--color-shadow);
+}
+
+.pagination-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.pagination-link-active {
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+

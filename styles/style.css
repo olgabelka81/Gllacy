@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -128,7 +128,16 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: var(--color-extra-dark);
+}
+
+.page-container {
+  width: 1366px;
+  margin: 0 auto;
   background-color: var(--color-light-bright);
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 /* Шапка */
@@ -137,11 +146,34 @@ body {
   margin: 0 auto;
 }
 
+.main-nav-logo {
+  width: 137px;
+  margin: 0;
+  padding: 0;
+  padding: 24px 16px 20px 0;
+}
+
+.main-nav {
+  display: flex;
+  margin: 0 auto;
+  padding-left: 98px;
+  padding-right: 98px;
+}
+
 .main-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
 }
 
 .main-nav-link {
+  padding: 8px 16px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -149,7 +181,30 @@ body {
   text-decoration: none;
 }
 
+.user-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 520px;
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+}
+
+.user-nav-contacts {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+
 .phone {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+  padding-right: 8px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -159,11 +214,49 @@ body {
 }
 
 .user-nav-link {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 6px 16px 6px 27px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: var(--color-extra-dark);
   text-decoration: none;
+}
+
+.user-nav-search {
+  padding: 7px;
+}
+
+.user-nav-link::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  padding-left: 24px;
+}
+
+.user-nav-search::before {
+  background-image: url("../images/icons/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-nav-login::before{
+  padding-right: 6px;
+  background-image: url("../images/icons/log-in.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-nav-basket::before{
+  padding-right: 6px;
+  background-image: url("../images/icons/bascet.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Промо */

@@ -128,15 +128,16 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: var(--color-extra-dark);
+  background-color: var(--color-light-bright);
 }
 
 .page-container {
   width: 1366px;
   margin: 0 auto;
-  background-color: var(--color-light-bright);
 }
 
 .main-container {
+  margin: 0 98px;
   flex-grow: 1;
 }
 
@@ -156,8 +157,7 @@ body {
 .main-nav {
   display: flex;
   margin: 0 auto;
-  padding-left: 98px;
-  padding-right: 98px;
+  padding: 0 98px;
 }
 
 .main-nav-list {
@@ -262,22 +262,75 @@ body {
 /* Промо */
 
 .promo-list {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  column-gap: 41px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
+.promo-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 554px;
+}
+
 .promo-caption {
+  padding: 136px 2px 24px 70px;
+  margin: 0;
+  order: 0;
+  max-width: 470px;
   font-size: 36px;
   font-weight: 900;
   line-height: 46px;
 }
 
+.promo-img {
+  padding: 0;
+  margin: 0;
+  padding-top: 2px;
+  margin-top: 20px;
+  order: 4;
+  align-self: center;
+}
+
+.promo-img-active {
+  align-self: flex-start;
+  background-color: var(--color-extra-light-bright);
+  background-size: 312px 312px;     /*фон не уменьшился*/
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo-img-slider {
+  background-color: var(--color-extra-light-bright);
+  background-size: 100px 100px;     /*фон не уменьшился*/
+  border-radius: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+}
+
 .promo-text {
+  margin: 0 0 44px 70px ;
+  order: 1;
+  max-width: 470px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .promo-link {
+  box-sizing: border-box;
+  max-width: 139px;
+  margin-left: 70px;
+  margin-bottom: 112px;
+  padding: 12px 32px;
+  order: 3;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -289,9 +342,61 @@ body {
   box-shadow: 0px 4px 12px var(--color-shadow);
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 /* Пагинация */
 
+.pagination-list {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  margin-right: auto;
+}
+
+.pagination-item {
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link-active {
+  text-decoration: none;
+}
+
+.pagination-link {
+  text-decoration: none;
+  opacity: 0.3;
+}
+
 /* ССылки на соц.сети */
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  height: 24px;
+}
+
+.socials-link {
+  margin-left: 16px;
+  width: 24px;
+  height: 24px;
+}
+
 
 /* Баннеры */
 

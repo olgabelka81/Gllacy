@@ -298,14 +298,41 @@ body {
   align-self: center;
 }
 
-.promo-img-active {
+.promo-item-active {
   position: relative;
+}
+
+.promo-img-active {
   align-self: flex-start;
   background-color: var(--color-extra-light-bright);
   background-size: 312px 312px;     /*фон не уменьшился*/
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.slider {
+  text-decoration: none;
+  fill: var(--color-extra-light);
+  stroke: var(--color-extra-light);
+  margin: 0 10px;
+  padding: 7px 14px;
+  flex-grow: 0;
+  border: 2px solid var(--color-extra-light);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.slider-left {
+  position: absolute;
+  top: 258px;
+  left: 532px;
+}
+
+.slider-right {
+  position: absolute;
+  top: 258px;
+  left: 844px;
 }
 
 .promo-img-slider {
@@ -348,32 +375,6 @@ body {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-}
-
-/* Слайдер */
-
-.slider {
-  text-decoration: none;
-  fill: var(--color-extra-light);
-  stroke: var(--color-extra-light);
-  margin: 0 10px;
-  padding: 7px 14px;
-  flex-grow: 0;
-  border: 2px solid var(--color-extra-light);
-  box-sizing: border-box;
-  border-radius: 50%;
-}
-
-.slider-left {
-  position: absolute;
-  top: 362px;
-  left: 666px;
-}
-
-.slider-right {
-  position: absolute;
-  top: 362px;
-  left: 978px;
 }
 
 /* Пагинация */
